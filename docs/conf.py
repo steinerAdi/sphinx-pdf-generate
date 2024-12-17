@@ -9,9 +9,10 @@
 import os
 import sys
 
+sys.path.append(os.path.abspath("../"))
+
 from sphinx_pdf_generate.version import __version__
 
-sys.path.append(os.path.abspath("../"))
 
 project = "Sphinx-Pdf-Generate"
 copyright = "2023, iSOLveIT"
@@ -41,7 +42,7 @@ html_theme_options = {
     "site_url": "https://isolveit.github.io/sphinx-pdf-generate",
     "repo_url": "https://github.com/iSOLveIT/sphinx-pdf-generate",
     "repo_name": "Sphinx-PDF Generate",
-    "repo_type": "github",
+    #"repo_type": "github",
     "edit_uri": "blob/main/docs",
     "globaltoc_collapse": True,
     "features": [
