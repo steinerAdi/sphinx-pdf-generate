@@ -1,4 +1,5 @@
 :pdf-title: Contributions
+:pdf-subtitle: A Sphinx extension to generate individual PDF files for each documentation page | Additional features are recommend
 :pdf-filename: Contributors Guide
 :pdf-revision: 0.0.1
 :pdf-type: manual
