@@ -1,4 +1,2 @@
+poetry
 html5lib
-colorama
-bs4
-weasyprint

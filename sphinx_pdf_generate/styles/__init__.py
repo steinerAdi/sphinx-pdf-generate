@@ -21,11 +21,16 @@ def _css_escape(text: Optional[str]) -> str:
 
     return text.replace("'", "\\27")
 
+def _get_subtitles(subtitles: list) -> str:
+    subtitles_css = ''
+    for i, x in enumerate(subtitles):
+        subtitles_css += f'--subtitle{i}: \'{_css_escape(x)}\'; '
+    return subtitles_css
 
 def style_for_print(options: Options, pdf_metadata: Optional[Dict[str, Any]] = None) -> list[Tag]:
     base_path = Path(Path(__file__).parent).resolve()
     pdf_metadata = {} if pdf_metadata is None else pdf_metadata
-
+    subtitles = pdf_metadata.get("subtitle", options.cover_subtitle)
     css_string = """
     :root {{
         --author: '{}';
@@ -37,19 +42,20 @@ def style_for_print(options: Options, pdf_metadata: Optional[Dict[str, Any]] = N
         --revision: '{}';
         --filename: '{}';
         --site-url: '{}';
+        {}
         --base-page-orientation: a4 portrait;
         --rotated-page-orientation: a4 landscape;
-
     }}""".format(
         _css_escape(options.author),
         _css_escape(options.author_logo),
         _css_escape(options.copyright),
         _css_escape(pdf_metadata.get("title", options.body_title or options.cover_title)),
-        _css_escape(pdf_metadata.get("subtitle", options.cover_subtitle)),
+        _css_escape(subtitles),
         _css_escape(pdf_metadata.get("type", "document")),
         _css_escape(pdf_metadata.get("revision", "")),
         _css_escape(pdf_metadata.get("filename", "")),
         _css_escape(re.sub(r"http://|https://", "", options.site_url)),
+        _get_subtitles(subtitles)
     )
     css_tag = Tag(name="style", attrs={"class": "plugin-default-css"})
     css_tag.append(css_string)
