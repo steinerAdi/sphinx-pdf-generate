@@ -101,11 +101,18 @@ div.tabbed-labels {
    border-style: solid;
    display: block;
 }
-:is(.note, .abstract, .info, .tip, .success, .question, .warning, .caution, .check, .done,
+/* :is(.note, .abstract, .info, .tip, .success, .question, .warning, .caution, .check, .done,
 .todo, .summary, .tldr, .failure, .danger, .bug, .example, .quote, .hint, .error, .important,
 .attention, .help, .faq, .fail, .missing, .cite) summary::after {
    display:none;
+} */
+
+
+/* Remove collapse symbol in pdf */
+.md-typeset summary::after {
+    display: none;
 }
+
 
 .admonition.note .admonition-title::before {
     color: #448aff;

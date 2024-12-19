@@ -43,7 +43,7 @@ class Renderer:
         self.inject_pgnum(soup)
 
         style_tags: list[Tag] = style_for_print(self._options, pdf_metadata)
-        #style_tags[0].append(self.theme.get_stylesheet())  # Add theme CSS
+        style_tags[0].append(self.theme.get_stylesheet())  # Add theme CSS
 
         for style_tag in style_tags:
             soup.head.append(style_tag)
