@@ -1,30 +1,31 @@
-.. _github-issues: https://github.com/iSOLveIT/sphinx-pdf-generate/issues
+..
+   .. _github-issues: https://github.com/iSOLveIT/sphinx-pdf-generate/issues
 
-.. |github-issues| replace:: GitHub issues
+   .. |github-issues| replace:: GitHub issues
 
-.. _weasyprint-linux: https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#linux
+   .. _weasyprint-linux: https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#linux
 
-.. |weasyprint-linux| replace:: Linux
+   .. |weasyprint-linux| replace:: Linux
 
-.. _weasyprint-macos: https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#macos
+   .. _weasyprint-macos: https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#macos
 
-.. |weasyprint-macos| replace:: MacOS
+   .. |weasyprint-macos| replace:: MacOS
 
-.. _weasyprint-windows: https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#windows
+   .. _weasyprint-windows: https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#windows
 
-.. |weasyprint-windows| replace:: Windows
+   .. |weasyprint-windows| replace:: Windows
 
-.. _sphinx-material: https://github.com/bashtage/sphinx-material/
+   .. _sphinx-material: https://github.com/bashtage/sphinx-material/
 
-.. |sphinx-material| replace:: Sphinx-Material
+   .. |sphinx-material| replace:: Sphinx-Material
 
-.. _sphinx-immaterial: https://github.com/jbms/sphinx-immaterial/
+   .. _sphinx-immaterial: https://github.com/jbms/sphinx-immaterial/
 
-.. |sphinx-immaterial| replace:: Sphinx-Immaterial
+   .. |sphinx-immaterial| replace:: Sphinx-Immaterial
 
-.. _contributing: https://isolveit.github.io/sphinx-pdf-generate/contribute.html
+   .. _contributing: https://isolveit.github.io/sphinx-pdf-generate/contribute.html
 
-.. |contributing| replace:: Contribution Guidelines
+   .. |contributing| replace:: Contribution Guidelines
 
 .. image:: https://img.shields.io/pypi/dm/sphinx-pdf-generate.svg
    :target: https://pypi.python.org/pypi/sphinx-pdf-generate

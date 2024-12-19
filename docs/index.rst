@@ -134,5 +134,6 @@ Their projects inspired the creation of this plugin. We've used some of their co
    Options <options>
    CLI Tool <cli>
    Customisation <customisation>
+   examples
    Contributions <contribute>
    Changelog & License <changelog>

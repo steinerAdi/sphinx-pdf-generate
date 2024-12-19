@@ -31,6 +31,16 @@ extensions = [
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "research.md"]
 
+sphinx_immaterial_custom_admonitions = [
+    {
+        "name": "demo",
+        "color": (43, 155, 70),
+        "icon": "fontawesome/solid/arrow-up-right-dots",
+        "classes": ["demo"],
+        "override": True
+    }
+]
+
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
@@ -115,9 +125,9 @@ rst_epilog = """
 """  # noqa: W291
 
 # Sphinx-PDF-Generate configurations
-pdfgen_verbose = False
+pdfgen_verbose = True
 pdfgen_site_url = "https://isolveit.github.io/sphinx-pdf-generate/"
-# pdfgen_debug = True
+pdfgen_debug = True
 # pdfgen_debug_target = "index.rst"
 pdfgen_author = "iSOLveIT"
 pdfgen_author_logo = "_static/SPDF-logo.png"
