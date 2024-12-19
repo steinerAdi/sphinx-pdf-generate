@@ -1,0 +1,6 @@
+/*Additional admonition demo definition*/
+.admonition:is(.demo) > .admonition-title::before {
+    color: rgb(43,155,70);
+    background-color: transparent;
+    content: var(--si-icon--fontawesome_solid_arrow-up-right-dots);
+}
