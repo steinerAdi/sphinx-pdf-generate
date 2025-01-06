@@ -117,7 +117,7 @@ rst_epilog = """
 # Sphinx-PDF-Generate configurations
 pdfgen_verbose = False
 pdfgen_site_url = "https://isolveit.github.io/sphinx-pdf-generate/"
-# pdfgen_debug = True
+pdfgen_debug = True
 # pdfgen_debug_target = "index.rst"
 pdfgen_author = "iSOLveIT"
 pdfgen_author_logo = "_static/SPDF-logo.png"
