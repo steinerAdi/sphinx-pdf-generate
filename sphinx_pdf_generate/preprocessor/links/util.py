@@ -35,10 +35,13 @@ def rel_html_href(base_url: str, href: str, site_url: str, outdir: str):
     if web_url or internal or not is_doc(href):
         return href
 
-    abs_html_href = Path(rel_url).joinpath(href).resolve()
+    # Include absolute paths to other page files relative to the build directory
+    if href.startswith('/'):
+        abs_html_href = rel_url + href
+    else:
+        abs_html_href = Path(rel_url).joinpath(href).resolve()
     abs_html_href = replace_build_dir.sub(site_url.rstrip("/"), str(abs_html_href))
     abs_html_href = abs_html_href.replace("\\", "/")
-
     if abs_html_href:
         return urls.iri_to_uri(abs_html_href)
     return href
