@@ -28,6 +28,16 @@ extensions = [
     "sphinx_pdf_generate",
 ]
 
+sphinx_immaterial_custom_admonitions = [
+    {
+        "name": "demo",
+        "color": (43, 155, 70),
+        "icon": "fontawesome/solid/arrow-up-right-dots",
+        "classes": ["demo"],
+        "override": True
+    }
+]
+
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "research.md"]
 
