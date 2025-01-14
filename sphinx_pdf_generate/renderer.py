@@ -17,6 +17,10 @@ from .styles import style_for_print
 from .templates.filters.url import URLFilter
 from .themes import generic as generic_theme
 
+from selenium import webdriver
+import os
+from time import sleep
+
 
 class Renderer:
     def __init__(self, options: Options, config: Dict[str, Any]):
@@ -53,6 +57,22 @@ class Renderer:
         cover.make_cover(soup, self._options, self._config, pdf_metadata=pdf_metadata)
         if self.user_plugin:
             self.user_plugin.main(soup=soup)
+        
+        # render JS for math equations
+        # Save first the file in a temporary file
+
+        script_tag = soup.new_tag('script', id="MathJax-script", src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js")
+        soup.head.append(script_tag)
+
+        if base_url.endswith("Example"):
+            with open("temp.html", "w") as temp_file:
+                temp_file.write(soup.prettify())
+
+            browser = webdriver.Chrome()
+            browser.get("file://" + os.path.realpath(temp_file.name))  
+            soup = BeautifulSoup(browser.page_source, "html5lib")
+            browser.quit()
+            os.remove(temp_file.name)
 
         # Enable Debugging
         not_as_uri = re.compile(r"^file:/{,2}")
