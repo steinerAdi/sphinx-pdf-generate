@@ -50,7 +50,7 @@ Admonitions
 Formulas
 --------
 
-A formula can be inline like: :c:`void` :rst:`:math:`:rst:`\`\\frac{3}{4}\,\text{m}\`` results in :math:`\frac{3}{4}\,\text{m}`.
+A formula can be inline like :c:`void` for C-code or :rst:`:math:\`\\frac{3}{4}\,\text{m}\`` results in :math:`\frac{3}{4}\,\text{m}`.
 
 A centered extended formula can be used with the math directive:
 
