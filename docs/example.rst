@@ -80,4 +80,18 @@ This must be set with:
    katex_prerender = True
 
 
+Lists
+-----
 
+With sphinx, lists are generated with a :rsT:`#.`.
+An offset can be set at the first line to continue from lists above.
+
+#. First element.
+#. Second element.
+#. Third element
+
+After this list, another list can started with the offset of 4.
+
+4. Fourth element
+#. Fifth element
+#. Sixth element
