@@ -64,7 +64,7 @@ class Renderer:
         script_tag = soup.new_tag('script', id="MathJax-script", src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js")
         soup.head.append(script_tag)
 
-        if False or base_url.endswith("Example"):
+        if False and base_url.endswith("Example"):
             #with open("temp.html", "w") as temp_file:
             #    temp_file.write(soup.prettify())
             temp_file = open("_build/pdf_html_debug/base.html")

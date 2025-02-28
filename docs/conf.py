@@ -26,7 +26,12 @@ extensions = [
     "sphinx_immaterial",
     "sphinx_design",
     "sphinx_pdf_generate",
+    "sphinxcontrib.katex"
 ]
+
+katex_prerender = True
+
+# imgmath_image_format = 'svg'
 
 sphinx_immaterial_custom_admonitions = [
     {

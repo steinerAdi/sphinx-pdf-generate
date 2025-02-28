@@ -68,4 +68,16 @@ A centered extended formula can be used with the math directive:
 
 .. math::
 
-    a^{2} + b^{2} = c^{2}
+   a^{2} + b^{2} = c^{2}
+
+To render correctly math equations, use the math extension `sphinxcontrib.katex`.
+The source is located at: `github <https://github.com/hagenw/sphinxcontrib-katex>`_ and use the same roles and directives as the sphinx math.
+The difference to the base math is the configuration to prerender the math source and use them directly in the html file.
+This must be set with:
+
+.. code:: python
+
+   katex_prerender = True
+
+
+
