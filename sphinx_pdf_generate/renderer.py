@@ -64,15 +64,16 @@ class Renderer:
         script_tag = soup.new_tag('script', id="MathJax-script", src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js")
         soup.head.append(script_tag)
 
-        if base_url.endswith("Example"):
-            with open("temp.html", "w") as temp_file:
-                temp_file.write(soup.prettify())
-
+        if False or base_url.endswith("Example"):
+            #with open("temp.html", "w") as temp_file:
+            #    temp_file.write(soup.prettify())
+            temp_file = open("_build/pdf_html_debug/base.html")
             browser = webdriver.Chrome()
             browser.get("file://" + os.path.realpath(temp_file.name))  
             soup = BeautifulSoup(browser.page_source, "html5lib")
             browser.quit()
-            os.remove(temp_file.name)
+            #os.remove(temp_file.name)
+
 
         # Enable Debugging
         not_as_uri = re.compile(r"^file:/{,2}")

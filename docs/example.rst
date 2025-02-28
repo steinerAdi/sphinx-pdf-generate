@@ -47,10 +47,22 @@ Admonitions
             }
         ]
 
+Source Code
+-----------
+Source code can be included in the sentence like :c:`void` for C-code.
+
+A paragraph for more lines is also possible:
+
+.. code:: python
+
+   number = 10
+   numberName = "age"
+   print(f'Number: {numberName} = {number}')
+
 Formulas
 --------
 
-A formula can be inline like :c:`void` for C-code or :rst:`:math:\`\\frac{3}{4}\,\text{m}\`` results in :math:`\frac{3}{4}\,\text{m}`.
+A ``formula`` can be inline like :rst:`:math:\`\\frac{3}{4}\text{m}\`` results in :math:`\frac{3}{4}\text{m}`.
 
 A centered extended formula can be used with the math directive:
 

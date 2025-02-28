@@ -76,16 +76,30 @@
     color: #000000de;
   }
 
-  .nv,
+  /* .nv,
   .kt {
     color: green !important;
     padding: 0 !important;
     border: 0 !important;
     margin: 0 !important;
-  }
+  } */
+
 }
 
-@media print {
+/* @media print {
   pre > code.sourceCode { white-space: pre-wrap; }
   pre > code.sourceCode > span { text-indent: 0; padding-left: 0; }
+} */
+
+code,
+.kt,
+.w,
+.n,
+.p{
+  padding: 0 !important;
+  word-break: normal !important;
+}
+
+.rst{
+  word-break: keep-all;
 }
