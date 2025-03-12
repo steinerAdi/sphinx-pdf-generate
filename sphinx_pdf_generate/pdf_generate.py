@@ -165,6 +165,7 @@ class PdfGeneratePlugin:
 
         abs_dest_path = Path(self._config["outdir"]).joinpath(f"{pagename}.html")
         src_path = Path(f"{pagename}.rst")
+
         self._options.rst_src_path = Path(self._config["srcdir"]).joinpath(src_path)
 
         dest_path = abs_dest_path.parent
