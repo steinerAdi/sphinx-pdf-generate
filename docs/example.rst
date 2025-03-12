@@ -53,6 +53,16 @@ Admonitions
                 "override": True
             }
         ]
+   
+.. seealso::
+   :collapsible: open
+
+   Read more about the configured admonition at `<https://jbms.github.io/sphinx-immaterial/admonitions.html>`_
+
+.. note::
+   :collapsible: open
+
+   Read more about the configured admonition at `<https://jbms.github.io/sphinx-immaterial/admonitions.html>`_
 
 Formulas
 --------
