@@ -6,7 +6,6 @@
 .. |pageLink| replace:: welcome page link 
 .. _pageLink: index.html
 
-
 .. role:: rst(code)
     :language: rst
 
@@ -25,8 +24,10 @@ Links
 
 Sphinx offers several link options with basic methods and additional roles.
 
-`website link to google <https://www.google.com/>`_, `relative link to index page <index.html>`_ or `absolute link to options page </options.html>`_.
-Link with :rst:`:doc:` role: :doc:`options`
+- Basic website link: `website link to google <https://www.google.com/>`_
+- Relative link `relative link to index page <index.html>`_
+- Absolute link to page `absolute link to options page </options.html>`_.
+- Link with :rst:`:doc:` role: :doc:`options`
 
 Admonitions
 -----------
@@ -59,11 +60,6 @@ Admonitions
 
    Read more about the configured admonition at `<https://jbms.github.io/sphinx-immaterial/admonitions.html>`_
 
-.. note::
-   :collapsible: open
-
-   Read more about the configured admonition at `<https://jbms.github.io/sphinx-immaterial/admonitions.html>`_
-
 Formulas
 --------
 
@@ -74,7 +70,6 @@ A centered extended formula can be used with the math directive:
 .. math::
 
     a^{2} + b^{2} = c^{2}
-
 
 Lists
 -----
