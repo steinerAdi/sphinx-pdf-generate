@@ -1,7 +1,8 @@
-:pdf-title: Example
+:pdf-title: Example Title
+:pdf-subtitle: Subtitle 1 | Subtitle 2 
 :pdf-filename: Example
 :pdf-revision: 0.0.1
-:pdf-type: manual
+:pdf-type: example
 
 .. |pageLink| replace:: welcome page link 
 .. _pageLink: index.html
