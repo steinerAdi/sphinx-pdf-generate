@@ -86,7 +86,7 @@ class Renderer:
             with open(pdf_html_file, "w", encoding="UTF-8") as f:
                 f.write(soup.prettify())
 
-        html = HTML(string=str(soup)).render()
+        html = HTML(string=str(soup)).render(presentational_hints=True)
         return html
 
     def add_link(self, content: str, file_name: str = None):

@@ -23,7 +23,7 @@ def _css_escape(text: Optional[str]) -> str:
 
 def _get_subtitles(subtitles: list) -> str:
     """Get all entrees in the subtitles list and separate them into own CSS variables in the format:
-     --subtitle<index>: '<subtitle>; 
+     --subtitle<index>: '<subtitle>;
     """
     subtitles_css = ''
     for i, x in enumerate(subtitles):

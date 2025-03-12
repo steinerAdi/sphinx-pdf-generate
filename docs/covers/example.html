@@ -1,0 +1,21 @@
+<article id="example_header" class="example_header">
+    <div class="header_content">
+        <div class="logo">
+            <img alt="LOGO" class="center" src="{{ author_logo | to_url }}">
+        </div>
+        <h1 class="title">{{ cover_title | e }}</h1>
+        <p class="subtitle">
+            {{ cover_subtitle[0] | e }}
+        </p>
+        <p class="header_properties">
+            {{ cover_subtitle[1] | e }}
+            <br />
+            {{ author | e }}
+            <br />
+            {{ revision | e }}
+        </p>
+        <!-- <br /> -->
+        <p class="disclaimer">
+            {{ disclaimer | e }}
+        </p>
+</article>

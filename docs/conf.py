@@ -9,10 +9,9 @@
 import os
 import sys
 
-sys.path.append(os.path.abspath("../"))
-
 from sphinx_pdf_generate.version import __version__
 
+sys.path.append(os.path.abspath("../"))
 
 project = "Sphinx-Pdf-Generate"
 copyright = "2023, iSOLveIT"
@@ -26,6 +25,19 @@ extensions = [
     "sphinx_immaterial",
     "sphinx_design",
     "sphinx_pdf_generate",
+    "sphinxcontrib.katex"
+]
+
+katex_prerender = True
+
+sphinx_immaterial_custom_admonitions = [
+    {
+        "name": "demo",
+        "color": (43, 155, 70),
+        "icon": "fontawesome/solid/arrow-up-right-dots",
+        "classes": ["demo"],
+        "override": True
+    }
 ]
 
 templates_path = ["_templates"]
@@ -42,7 +54,7 @@ html_theme_options = {
     "site_url": "https://isolveit.github.io/sphinx-pdf-generate",
     "repo_url": "https://github.com/iSOLveIT/sphinx-pdf-generate",
     "repo_name": "Sphinx-PDF Generate",
-    #"repo_type": "github",
+    # "repo_type": "github", Unsupported theme option 
     "edit_uri": "blob/main/docs",
     "globaltoc_collapse": True,
     "features": [
@@ -126,7 +138,7 @@ pdfgen_disclaimer = "Disclaimer: Content can change at anytime and best to refer
 pdfgen_cover = True
 # pdfgen_cover_title = ""
 # pdfgen_cover_subtitle = ""
-pdfgen_custom_template_path = ""
+pdfgen_custom_template_path = "covers"
 pdfgen_custom_css_path = ""
 # pdfgen_plugin_handler_path = "custom_code.py"
 pdfgen_toc = True
