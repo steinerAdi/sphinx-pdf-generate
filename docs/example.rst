@@ -17,13 +17,13 @@
 Example
 =======
 
-This page is used to add some examples how to use sphinx codes and how it is rendered with this extension without additional fixures.
+This page is used to add some examples how to use sphinx codes and how it is rendered with this extension [1]_.
 For more information about this extension, have a look to the |pageLink|_.
 
 Links
 -----
 
-
+Sphinx offers several link options with basic methods and additional roles.
 
 `website link to google <https://www.google.com/>`_, `relative link to index page <index.html>`_ or `absolute link to options page </options.html>`_.
 Link with :rst:`:doc:` role: :doc:`options`
@@ -80,3 +80,8 @@ After a list, a next can be started with the desired offset:
 5. Element with offset of 5
 #. Incremented element
 #. Incremented element
+
+
+.. [1]
+   This is a basic footnote at the end of the document.
+   Find more examples and customizations for the web page at `sphinx-immaterial documentation <https://jbms.github.io/sphinx-immaterial/>`_.
