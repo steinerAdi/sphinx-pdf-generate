@@ -26,7 +26,10 @@ extensions = [
     "sphinx_immaterial",
     "sphinx_design",
     "sphinx_pdf_generate",
+    "sphinxcontrib.katex"
 ]
+
+katex_prerender = True
 
 sphinx_immaterial_custom_admonitions = [
     {
