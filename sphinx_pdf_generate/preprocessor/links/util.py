@@ -37,11 +37,11 @@ def rel_html_href(base_url: str, href: str, site_url: str, outdir: str):
 
     # Include absolute paths to other page files relative to the build directory
     if href.startswith('/'):
-        abs_html_href = rel_url + href
+        abs_html_href = site_url.rstrip("/") + href
     else:
         abs_html_href = Path(rel_url).joinpath(href).resolve()
-    abs_html_href = replace_build_dir.sub(site_url.rstrip("/"), str(abs_html_href))
-    abs_html_href = abs_html_href.replace("\\", "/")
+        abs_html_href = replace_build_dir.sub(site_url.rstrip("/"), str(abs_html_href))
+        abs_html_href = abs_html_href.replace("\\", "/")
     if abs_html_href:
         return urls.iri_to_uri(abs_html_href)
     return href
