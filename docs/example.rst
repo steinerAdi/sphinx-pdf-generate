@@ -87,18 +87,12 @@ After a list, a next can be started with the desired offset:
 #. Incremented element
 #. Incremented element
 
-
-.. [1]
-   This is a basic footnote at the end of the document.
-   Find more examples and customizations for the web page at `sphinx-immaterial documentation <https://jbms.github.io/sphinx-immaterial/>`_.
-
-
 Tabs
 ----
 Simple tab:
 
 .. md-tab-set::
-   :name: ref_nestedTabs
+   :name: ref_simpleTab
 
    .. md-tab-item:: First Item
 
@@ -107,7 +101,6 @@ Simple tab:
    .. md-tab-item:: Second Item
 
       Element 2
-
 
 Example of a nested tabbed list:
 
@@ -118,15 +111,15 @@ Example of a nested tabbed list:
 
       .. md-tab-set::
 
-         .. md-tab-item:: 11
+         .. md-tab-item:: Title 11
 
             Element 11
 
-         .. md-tab-item:: 12
+         .. md-tab-item:: Title 12
 
             Element 12
 
-         .. md-tab-item:: 13
+         .. md-tab-item:: Title 13
             
             Element 13
    
@@ -134,14 +127,19 @@ Example of a nested tabbed list:
 
       .. md-tab-set::
 
-         .. md-tab-item:: 21
+         .. md-tab-item:: Title 21
             
             Element 21
          
-         .. md-tab-item:: 22
+         .. md-tab-item:: Title 22
 
             Element 22
 
-         .. md-tab-item:: 23
+         .. md-tab-item:: Title 23
 
             Element 23
+
+
+.. [1]
+   This is a basic footnote at the end of the document.
+   Find more examples and customizations for the web page at `sphinx-immaterial documentation <https://jbms.github.io/sphinx-immaterial/>`_.
