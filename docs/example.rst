@@ -89,20 +89,35 @@ After a list, a next can be started with the desired offset:
 
 Tabs
 ----
-Simple tab:
+Example of a nested tabbed list with  :rst:`.. tab-set`:
 
-.. md-tab-set::
-   :name: ref_simpleTab
+.. tab-set::
 
-   .. md-tab-item:: First Item
+   .. tab-item:: First Item
 
-      Element 1
+      .. tab-set::
 
-   .. md-tab-item:: Second Item
+         .. tab-item:: Title 1
 
-      Element 2
+            Element 1
 
-Example of a nested tabbed list:
+         .. tab-item:: Title 2
+
+            Element 2
+
+   .. tab-item:: Second Item
+
+      .. tab-set::
+
+         .. tab-item:: Title 11
+
+            Element 11
+
+         .. tab-item:: Title 12
+
+            Element 12
+
+Example of a nested tabbed list with :rst:`.. md-tab-set`:
 
 .. md-tab-set::
    :name: ref_nestedTabs

@@ -11,8 +11,11 @@ def restructure_tabbed_content(soup: BeautifulSoup) -> BeautifulSoup:
     :return: Restructured HTML content
     """
     labels = soup.find_all("label", attrs={"for": re.compile(r"^__tabbed_[\d_]+$|^sd-tab-item-\d+$")})
+    print(f'Labels: {labels}\n\n')
     blocks = soup.find_all("div", attrs={"class": re.compile(r"tabbed-block|sd-tab-content")})
+    print(f'Blocks: {blocks}\n\n')
     tab_content = soup.find_all("div", attrs={"class": "tabbed-content"})
+    print(f'Content: {tab_content}\n\n')
 
     new_blocks = []
 
