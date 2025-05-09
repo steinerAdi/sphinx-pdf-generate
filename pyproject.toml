@@ -44,6 +44,7 @@ beautifulsoup4 = ">=4.6.3"
 jinja2 = ">=3.0.0"
 pypdf = ">=3.6.0"
 simple-file-checksum = ">=1.2.2"
+html5lib = ">=1.1"
 
 [tool.poetry.scripts]
 sphinx-pdf-generate = 'sphinx_pdf_generate.__main__:main'
