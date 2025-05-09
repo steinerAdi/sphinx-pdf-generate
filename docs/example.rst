@@ -87,6 +87,73 @@ After a list, a next can be started with the desired offset:
 #. Incremented element
 #. Incremented element
 
+Tabs
+----
+Example of a nested tabbed list with  :rst:`.. tab-set`:
+
+.. tab-set::
+
+   .. tab-item:: First Item
+
+      .. tab-set::
+
+         .. tab-item:: Title 1
+
+            Element 1
+
+         .. tab-item:: Title 2
+
+            Element 2
+
+   .. tab-item:: Second Item
+
+      .. tab-set::
+
+         .. tab-item:: Title 11
+
+            Element 11
+
+         .. tab-item:: Title 12
+
+            Element 12
+
+Example of a nested tabbed list with :rst:`.. md-tab-set`:
+
+.. md-tab-set::
+   :name: ref_nestedTabs
+
+   .. md-tab-item:: First Item
+
+      .. md-tab-set::
+
+         .. md-tab-item:: Title 11
+
+            Element 11
+
+         .. md-tab-item:: Title 12
+
+            Element 12
+
+         .. md-tab-item:: Title 13
+            
+            Element 13
+   
+   .. md-tab-item:: Second Item
+
+      .. md-tab-set::
+
+         .. md-tab-item:: Title 21
+            
+            Element 21
+         
+         .. md-tab-item:: Title 22
+
+            Element 22
+
+         .. md-tab-item:: Title 23
+
+            Element 23
+
 
 .. [1]
    This is a basic footnote at the end of the document.
