@@ -61,9 +61,7 @@ class Renderer:
         else: 
             not_as_uri = re.compile(r"^file:/{,2}")
         pattern = r"^{}".format(self._config["outdir"].replace("\\", "/").rstrip("/"))
-        print(f"pattern {os.name}")
         check_site_dir = re.compile(pattern)
-        print(f"check_site_dir {check_site_dir}")
         if self._options.debug and self._options.debug_target is not None:
             # Debug a single PDF build file
             path_filter = URLFilter(self._options, self._config)
@@ -84,15 +82,9 @@ class Renderer:
         elif self._options.debug and self._options.debug_target is None:
             # Debug every PDF build file
             debug_folder_path = str(self._options.debug_dir()).replace("\\", "/")
-            print(f"debug_folder_path {debug_folder_path}")
-            print(f"base_url {base_url}")
-            print(f"not_as_uri {not_as_uri}")
             rel_url = not_as_uri.sub('', base_url)
-            print(f"rel_url {rel_url}")
             pdf_html_file = check_site_dir.sub(debug_folder_path, rel_url) + ".html"
-            print(f"pdf html file {pdf_html_file}")
             pdf_html_dir = Path(pdf_html_file).parent
-            print(f"pdf html dir {pdf_html_dir}")
             if not pdf_html_dir.is_dir():
                 pdf_html_dir.mkdir(parents=True, exist_ok=True)
             with open(pdf_html_file, "w", encoding="UTF-8") as f:
