@@ -27,7 +27,7 @@ def is_doc(href: str):
 def rel_html_href(base_url: str, href: str, site_url: str, outdir: str):
     new_base_url = os.path.dirname(base_url)
     rel_url = new_base_url.replace("file://", "")
-    pattern = r"^(/tmp|tmp)/pages[\w\-]+|^[\w\-:\\]+\\+(temp|Temp)\\+pages[\w\-]+|^{}".format(outdir.rstrip("/"))
+    pattern = r"^(/tmp|tmp)/pages[\w\-]+|^[\w\-:\\]+\\+(temp|Temp)\\+pages[\w\-]+|^{}".format(outdir.replace("\\", "/").rstrip("/"))
     replace_build_dir = re.compile(pattern)
 
     internal = href.startswith("#")
