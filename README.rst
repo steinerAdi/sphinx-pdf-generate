@@ -74,6 +74,13 @@ Requirements
 4. Explicit support for your Sphinx theme is probably required using custom CSS. As of now, the supported themes are |sphinx-material|_ and |sphinx-immaterial|_.
    A generic version will just generate the PDF files and put the download link into a ``<link>`` tag.
 
+Additional Packages
++++++++++++++++++++
+
+Using from `sphinxcontrib-katex <https://pypi.org/project/sphinxcontrib-katex/>`_ the feature ``prerender``,  nodejs is needed.
+You can check the application using ``node --version`` in the terminal.
+You can install it from: `nodejs.org/en/download <https://nodejs.org/en/download>`_
+
 Installation
 ------------
 

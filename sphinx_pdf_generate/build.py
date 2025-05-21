@@ -3,6 +3,7 @@
 import shlex
 import subprocess
 import sys
+import shutil
 from typing import List, Optional, Union
 
 from colorama import Fore, Style
@@ -53,8 +54,7 @@ def get_builder(sphinx_args: List[str]) -> int:
         """Generate the documentation using ``sphinx``."""
 
         try:
-            remove_dir_command = ["rm", "-fr", sphinx_args[-1]]
-            subprocess.run(remove_dir_command, check=True)
+            shutil.rmtree(sphinx_args[-1])
             show(command=["sphinx-build"] + sphinx_args)
             sphinx_build = subprocess.run(sphinx_command, check=True)
             return sphinx_build.returncode

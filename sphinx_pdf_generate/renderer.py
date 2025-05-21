@@ -16,6 +16,7 @@ from .preprocessor import get_separate as prep_separate
 from .styles import style_for_print
 from .templates.filters.url import URLFilter
 from .themes import generic as generic_theme
+import os
 
 
 class Renderer:
@@ -55,8 +56,11 @@ class Renderer:
             self.user_plugin.main(soup=soup)
 
         # Enable Debugging
-        not_as_uri = re.compile(r"^file:/{,2}")
-        pattern = r"^{}".format(self._config["outdir"].rstrip("/"))
+        if os.name == 'nt':
+            not_as_uri = re.compile(r"^file:/{,3}")
+        else: 
+            not_as_uri = re.compile(r"^file:/{,2}")
+        pattern = r"^{}".format(self._config["outdir"].replace("\\", "/").rstrip("/"))
         check_site_dir = re.compile(pattern)
         if self._options.debug and self._options.debug_target is not None:
             # Debug a single PDF build file
@@ -66,7 +70,7 @@ class Renderer:
 
             if doc_src_path == debug_target_file:
                 debug_folder_path = str(self._options.debug_dir()).replace("\\", "/")
-                rel_url = not_as_uri.sub("", base_url)
+                rel_url = not_as_uri.sub('', base_url)
                 pdf_html_file = check_site_dir.sub(debug_folder_path, rel_url) + ".html"
                 pdf_html_dir = Path(pdf_html_file).parent
                 if not pdf_html_dir.is_dir():
@@ -78,7 +82,7 @@ class Renderer:
         elif self._options.debug and self._options.debug_target is None:
             # Debug every PDF build file
             debug_folder_path = str(self._options.debug_dir()).replace("\\", "/")
-            rel_url = not_as_uri.sub("", base_url)
+            rel_url = not_as_uri.sub('', base_url)
             pdf_html_file = check_site_dir.sub(debug_folder_path, rel_url) + ".html"
             pdf_html_dir = Path(pdf_html_file).parent
             if not pdf_html_dir.is_dir():
